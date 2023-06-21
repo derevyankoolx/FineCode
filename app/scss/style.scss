@@ -47,9 +47,9 @@ p {
 }
 
 .container {
-    width: 1200px;
+    width: 1160px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 10px;
 }
 
 .title {
@@ -323,6 +323,7 @@ p {
     height: 355px;
     top: 20%;
     right: 12%;
+    z-index: -5;
 }
 
 .about {
@@ -384,6 +385,7 @@ p {
         left: 26%;
         width: 440px;
         height: 452px;
+        z-index: -5;
     }
 }
 
@@ -561,6 +563,7 @@ p {
         height: 408px;
         bottom: -123px;
         right: 100px;
+        z-index: -5;
     }
 
     &__inner {
@@ -714,6 +717,28 @@ p {
     font-family: 'Montserrat', sans-serif;
     line-height: 150%;
     position: relative;
+
+    .blog__btn {
+        display: none;
+    }
+
+    .blog__button {
+        padding: 15px 51px;
+        color: #F5F4F4;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        background: #0D46DB;
+        border-radius: 30px;
+        width: 210px;
+        margin: 0 auto;
+        transition: .3s;
+    }
+    .blog__button:hover {
+        background-color: #F5F4F4;
+        color: #050930;
+    }
+
     &:after {
         position: absolute;
         content: '';
@@ -723,7 +748,9 @@ p {
         height: 440px;
         top: 0;
         right: -15%;
+        z-index: -5;
     }
+
     &__inner {
         display: flex;
         margin-bottom: 50px;
@@ -790,6 +817,7 @@ p {
     margin: 80px 0 0 0;
     padding: 80px 0;
     position: relative;
+
     &:after {
         position: absolute;
         content: '';
@@ -799,10 +827,16 @@ p {
         height: 440px;
         top: 0;
         left: -20%;
+        z-index: -5;
     }
+
     &__inner {
         display: flex;
         justify-content: space-between;
+    }
+
+    .offer__img {
+        max-width: 100%;
     }
 
     &__descr {
@@ -835,4 +869,147 @@ p {
         background: #F5F4F4;
         color: #050930;
     }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 768px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    .descr__item {
+        width: 100%;
+
+    }
+    .blog__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .blog__item {
+        margin: 10px;
+    }
+
+    .direction__item {
+        margin: 0 10px 20px 0;
+        padding-right: 60px;
+    }
+
+
+
+    .direction__item:nth-child(3),
+    .direction__item:nth-child(6) {
+        margin: 0 10px 20px 0;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .main {
+        background-position: -96px 129px;
+
+        .main__descr:before {
+            bottom: -210%;
+        }
+
+        .main__descr:after {
+            right: 5%;
+        }
+    }
+
+    .descr__item:nth-child(3) {
+        margin-bottom: 77px;
+    }
+
+    .main__title {
+        font-size: 36px;
+    }
+
+    .about__title {
+        font-size: 24px;
+        width: 541px;
+    }
+
+    .about__item {
+        max-width: 185px;
+        margin-top: 20px;
+        margin-left: 0;
+        font-size: 14px;
+        margin-right: 15px;
+    }
+
+    .about__item:before {
+        top: -40px;
+        left: 0px;
+    }
+
+    .about__item:last-child {
+        margin-right: 0;
+    }
+
+    .about__item:nth-child(3) {
+        margin-right: 0;
+    }
+
+    .blog__inner {
+        flex-wrap: wrap;
+    }
+
+
+
+    .blog:after {
+        top: 0;
+        right: 30%;
+        z-index: -5;
+    }
+
+    .header__inner {
+        padding: 0 15px;
+    }
+
+    .popular-courses__item {
+        margin-right: 9px;
+    }
+
+    .popular-courses__item:nth-child(3),
+    .popular-courses__item:nth-child(6) {
+        margin-right: 9px;
+    }
+
+    .info__title {
+        font-size: 24px;
+        max-width: 524px;
+    }
+
+    .offer__title {
+        font-size: 24px;
+    }
+
+    .offer__inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+
+    .info__title {
+        max-width: none;
+    }
+
+    .offer .offer__img {
+        margin-top: 80px;
+    }
+
+    .footer__inner {
+        flex-wrap: wrap;
+        align-content: space-around;
+        align-items: baseline;
+        flex-direction: column;
+    }
+
+    .footer__social {
+        margin-top: 80px;
+    }
+
 }
