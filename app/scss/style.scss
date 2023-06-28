@@ -338,6 +338,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     line-height: 150%;
     color: #f5f4f4;
+    font-weight: 300;
 
     &__title {
         text-align: center;
@@ -347,6 +348,69 @@ p {
         margin-bottom: 30px;
     }
 
+    &__descr {
+        text-align: center;
+        display: block;
+        margin-bottom: 60px;
+        font-weight: bold;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    &__list li {
+        list-style-type: disc;
+    }
+
+    &__subtitle {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .bold-italic {
+        font-style: italic;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .text-privacy {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+}
+
+.breadcrumbs {
+    margin-top: -80px;
+    margin-bottom: 40px;
+
+    &-link {
+        font-weight: 500;
+        line-height: 150%;
+        font-size: 12px;
+        color: #F5F4F4;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    &-link:before {
+        content: '/';
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #F5F4F4;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .first-link:before {
+        display: none;
+    }
 }
 
 .main {
@@ -613,12 +677,26 @@ p {
     }
 }
 
+
 .direction {
     margin: 80px 0;
     padding: 80px 0;
     background: url(../images/bg/circle.avif);
     background-repeat: no-repeat;
     background-position: center 46%;
+
+    .titl {
+        margin-bottom: 30px;
+    }
+
+    &__descr {
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        line-height: 150%;
+        color: #0D46DB;
+        margin-bottom: 60px;
+    }
 
     &__inner {
         display: flex;
@@ -632,7 +710,7 @@ p {
         background: #13163F;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 30px;
-        margin: 0 30px 30px 0;
+        margin: 0 20px 30px 0;
         transition: all .3s;
     }
 
@@ -685,9 +763,14 @@ p {
 
     .direction__item-title {
         font-size: 600px;
-        font-size: 20px;
+        font-size: 16px;
         color: #F5F4F4;
     }
+}
+
+.direction-index {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .popular-courses {
@@ -1017,6 +1100,9 @@ p {
 }
 
 
+
+
+
 @media screen and (max-width: 768px) {
     .container {
         width: 768px;
@@ -1159,9 +1245,16 @@ p {
         margin-top: 80px;
     }
 
+    .direction__descr {
+        text-align: left;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
+    .breadcrumbs {
+        text-align: center;
+    }
     .header__menu {
         display: none;
     }
@@ -1311,24 +1404,35 @@ p {
     .blog__item-img {
         width: 480px;
     }
+
     .popular-courses__btn {
         width: 480px;
         text-align: center;
     }
+
     .blog .blog__button {
         width: 480px;
         text-align: center;
     }
+
     .offer__btn {
         display: block;
         margin: 0 auto;
         text-align: center;
         width: 480px;
     }
-
+    .direction__descr {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 320px) {
+    .breadcrumbs {
+        text-align: center;
+    }
+    .direction__descr {
+        text-align: center;
+    }
     .main__descr {
         max-width: 318px;
     }
@@ -1366,42 +1470,52 @@ p {
     .popular-courses__item {
         width: 320px;
     }
+
     .popular-courses__item-img {
         width: 320px;
     }
+
     .popular-courses__btn {
         width: 320px;
         text-align: center;
     }
+
     .title {
         width: 320px;
         margin: 0 auto 50px;
     }
+
     .about__title {
         text-align: left;
     }
+
     .blog__item {
         max-width: 320px;
         margin-bottom: 30px;
     }
+
     .blog__item-img {
         width: 320px;
     }
+
     .blog__inner {
         flex-direction: column;
         align-items: center;
     }
+
     .blog .blog__button {
         width: 320px;
         text-align: center;
     }
+
     .offer__btn {
         display: block;
         margin: 0 auto;
         text-align: center;
         width: 320px;
     }
-    .offer__title  {
+
+    .offer__title {
         text-align: left;
     }
 }
