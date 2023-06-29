@@ -800,15 +800,11 @@ p {
     }
 
     &__item {
+        display: block;
         background: #13163F;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 30px;
-        margin: 0 30px 30px 0;
-    }
-
-    &__item:nth-child(3),
-    &__item:nth-child(6) {
-        margin-right: 0;
+        margin: 0 20px 20px 0;
     }
 
     &__item-img {
@@ -866,6 +862,7 @@ p {
         font-weight: 600;
         font-size: 20px;
         margin-bottom: 20px;
+        color: #F5F4F4;
     }
 
     &__item-author,
@@ -874,6 +871,7 @@ p {
         font-size: 14px;
         font-weight: 500;
         margin-bottom: 15px;
+        color: #F5F4F4;
     }
 
     &__item-views {
@@ -893,6 +891,7 @@ p {
 
     &__item-views {
         margin-bottom: 47px;
+        color: #F5F4F4;
     }
 
 
