@@ -10,11 +10,7 @@ mobileMenu.addEventListener('click', function () {
 });
 
 
-
 secondmenu.addEventListener('click', function () {
     secondmenu.classList.toggle('active');
 });
-
-
-
 
