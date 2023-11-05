@@ -14,3 +14,13 @@ secondmenu.addEventListener('click', function () {
     secondmenu.classList.toggle('active');
 });
 
+const screen = document.querySelector('.wrapper');
+const btnBox = document.querySelector('.blog-item__btn');
+
+
+
+if (screen.innerWidth == '1100px') {
+    btnBox.style.display = 'none';
+}   else {
+    btnBox.style.display = 'block';
+}
