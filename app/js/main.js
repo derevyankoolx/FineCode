@@ -19,8 +19,3 @@ const btnBox = document.querySelector('.blog-item__btn');
 
 
 
-if (screen.innerWidth == '1100px') {
-    btnBox.style.display = 'none';
-}   else {
-    btnBox.style.display = 'block';
-}
