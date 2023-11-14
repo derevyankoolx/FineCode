@@ -20,6 +20,7 @@ body {
 a {
     text-decoration: none;
 }
+
 a:visited {
     text-decoration: none;
     color: inherit;
@@ -322,7 +323,7 @@ p {
     background-image: url(../images/bg/circle.avif);
     background-repeat: no-repeat;
     background-position: 78% -10px;
-    padding-bottom: 82px;
+    padding-bottom: 60px;
     font-size: 14px;
 
     &__inner {
@@ -344,6 +345,7 @@ p {
         }
 
     }
+
     .footer__privacy:visited {
         color: #F5F4F4;
     }
@@ -409,7 +411,7 @@ p {
 }
 
 .main {
-    margin-top: 180px;
+    margin-top: 170px;
     background-image: url(../images/bg/circle.avif);
     background-repeat: no-repeat;
     background-position: 5px 20px;
@@ -481,6 +483,7 @@ p {
         height: 40px;
         left: 80px;
         bottom: -280%;
+        z-index: -55000;
     }
 
     .main__descr:after {
@@ -527,8 +530,7 @@ p {
 }
 
 .about {
-    margin: 80px 0;
-    padding: 80px 0 0;
+    margin: 80px 0 115px 0;
     position: relative;
 
     &__descr {
@@ -641,10 +643,6 @@ p {
         margin-right: 30px;
     }
 
-    &__item:nth-child(4),
-    &__item:nth-child(3) {
-        margin-bottom: 0;
-    }
 
     &__item:nth-child(1):before {
         background-image: url(../images/numbers/01.webp);
@@ -690,18 +688,22 @@ p {
     &__inner {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin-bottom: 50px;
     }
 
     &__item {
         display: flex;
-        padding: 30px 70px 30px 30px;
+        padding: 30px 39px 30px 30px;
         background: #13163F;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 30px;
-        margin: 0 20px 30px 0;
+        margin: 0 0px 30px 0;
         transition: all .3s;
+        max-width: 360px;
+        width: 360px;
     }
+
 
     &__item:hover {
         transform: scale(1.05);
@@ -730,6 +732,16 @@ p {
 
     .android-title {
         font-size: 16px;
+    }
+
+    .android {
+        height: 60px;
+    }
+
+    .android-item {
+        .direction__item-title {
+            font-size: 16px;
+        }
     }
 
     .direction__item-img {
@@ -784,17 +796,21 @@ p {
     &__inner {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin-bottom: 50px;
     }
 
-    &__item {
-        display: block;
+    &__link {
+        border-radius: 30px;
+        cursor: pointer;
+        padding: 0;
         background: #13163F;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 30px;
-        margin: 0 20px 20px 0;
-        cursor: pointer;
+        display: block;
+        margin-bottom: 30px;
     }
+
+
 
     &__item-img {
         display: block;
@@ -851,9 +867,8 @@ p {
 
 
 
-    &__item-btn {
-        position: absolute;
-        left: 8%;
+    &__item-text {
+
         color: #F5F4F4;
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
@@ -973,6 +988,7 @@ p {
     &__inner {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin-bottom: 50px;
     }
 
@@ -981,7 +997,7 @@ p {
         max-width: 360px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 30px;
-        margin: 0 10px 30px;
+        margin-bottom: 30px;
         color: #F5F4F4;
     }
 
@@ -1016,7 +1032,14 @@ p {
 
 }
 
+.post-inner__title {
+    margin-bottom: 60px;
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
 
+}
 
 .offer {
     margin: 80px 0 80px 0;
@@ -1280,9 +1303,13 @@ p {
         padding: 0 15px;
     }
 
+
+    .android-title {
+        font-size: 16px;
+    }
+
     .post-inner {
         display: flex;
-        flex-direction: column-reverse;
         align-items: center;
     }
 
@@ -1345,11 +1372,16 @@ p {
             justify-content: space-between;
         }
 
+        .popular-courses__link {
+            display: block;
+            margin-bottom: 30px;
+        }
+
         &__item {
-            margin: 0 0 30px 0;
             max-width: 350px;
             width: 350px;
         }
+
 
         &__item-img {
             max-width: 350px;
@@ -1399,10 +1431,11 @@ p {
     .about__title {
         font-size: 24px;
         width: 541px;
+        margin-bottom: 85px;
     }
 
     .about__item {
-        max-width: 185px;
+        max-width: 155px;
         margin-top: 20px;
         margin-left: 0;
         font-size: 14px;
@@ -1464,9 +1497,6 @@ p {
         text-align: left;
     }
 
-    .post {
-        margin: 0 15px;
-    }
 
     .post__img-item {
         width: 49%;
@@ -1483,9 +1513,20 @@ p {
         max-width: 480px;
         padding: 0 10px;
     }
+    .post-inner__title {
+        font-size: 20px;
+    }
+    .post-inner {
+        flex-direction: column-reverse;
+    }
 
     .blog-page:after {
         left: 2%;
+    }
+
+    .post:after {
+        left: 0;
+        width: 450px;
     }
 
     .main__btns {
@@ -1613,10 +1654,8 @@ p {
 
 
     .about__inner {
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .about__item {
@@ -1635,22 +1674,21 @@ p {
 
 
     .about__item:before {
-        left: 30%;
+        left: 0%;
     }
 
     .title {
         font-size: 20px;
     }
 
-    .descript__direction {
-        text-align: center;
+
+    .direction {
+        &__item {
+            max-width: 460px;
+            width: 460px;
+        }
     }
 
-
-    .descript__item {
-        max-width: 480px;
-        margin: 0 auto 30px;
-    }
 
 
     .direction__inner {
@@ -1672,7 +1710,6 @@ p {
     .popular-courses__item {
         width: 460px;
         max-width: 460px;
-        margin-bottom: 30px;
     }
 
     .popular-courses {
@@ -1716,9 +1753,6 @@ p {
         width: 320px;
     }
 
-    .direction__descr {
-        text-align: center;
-    }
 
     .header {
         .header__mobile-dropdown:after {
@@ -1737,12 +1771,15 @@ p {
 
     .footer {
         .footer__mobile {
+            margin-top: 80px;
             display: flex;
             flex-direction: column;
+
             .footer__logo {
                 margin-bottom: 50px;
                 display: block;
             }
+
             p {
                 margin-bottom: 15px;
                 color: #F5F4F4;
@@ -1751,13 +1788,20 @@ p {
                 font-style: normal;
                 font-weight: 500;
             }
+
             h4 {
                 margin-bottom: 25px;
             }
+
             .footer__privacy:visited {
                 color: #F5F4F4;
             }
         }
+    }
+
+    .popular-courses__item-img {
+        max-width: 460px;
+        width: 460px;
     }
 
 }
@@ -1766,11 +1810,26 @@ p {
 @media screen and (max-width: 320px) {
     .container {
         max-width: 320px;
-        padding: 0 5px;
+        padding: 0 15px;
     }
 
     .blog-page:after {
-        left: -44%;
+        left: -54%;
+    }
+
+    .post:after {
+        width: 320px;
+    }
+
+    .main__title {
+        width: 290px;
+        line-height: 109%;
+
+    }
+
+    .main .main__descr:before {
+        bottom: 66px;
+        left: -2px;
     }
 
     .popular-courses__inner {
@@ -1778,17 +1837,23 @@ p {
         justify-content: center;
     }
 
+    .footer__mobile {
+        text-align: center;
+    }
+
+    .footer__social .footer__socmenu {
+        justify-content: center;
+    }
 
     .popular-courses__item {
-        width: 310px;
-        max-width: 310px;
-        margin-bottom: 30px;
+        width: 290px;
+        max-width: 290px;
     }
 
     .popular-courses {
         .popular-courses__item-img {
-            max-width: 310px;
-            width: 310px;
+            max-width: 290px;
+            width: 290px;
         }
 
     }
@@ -1798,7 +1863,11 @@ p {
     }
 
     .main__descr {
-        max-width: 300px;
+        max-width: 290px;
+    }
+
+    .direction .android-item .direction__item-title {
+        font-size: 13px;
     }
 
     .post__btns {
@@ -1811,7 +1880,7 @@ p {
     }
 
     .blog__item-img {
-        max-width: 310px;
+        max-width: 290px;
     }
 
 
@@ -1819,13 +1888,13 @@ p {
 
 
     .direction__descr {
-        text-align: center;
+        text-align: left;
     }
 
 
     .direction {
         .button {
-            width: 300px;
+            width: 290px;
         }
     }
 
@@ -1834,7 +1903,7 @@ p {
     }
 
     .descript__inner {
-        align-items: center;
+        align-items: left;
     }
 
     .descript__item:nth-child(1),
@@ -1848,7 +1917,7 @@ p {
 
     .direction__item {
         padding-right: 30px;
-        width: 310px;
+        width: 290px;
     }
 
     .blog {
@@ -1862,17 +1931,31 @@ p {
 
 
     .popular-courses__btn {
-        width: 300px;
+        width: 290px;
         text-align: center;
     }
 
+    .popular-courses__item-img {
+        max-width: 290px;
+        width: 290px;
+    }
+
     .title {
-        width: 300px;
+        width: 290px;
         margin: 0 auto 50px;
     }
 
     .about__title {
         text-align: left;
+        margin-bottom: 105px;
+    }
+
+    .about__inner {
+        justify-content: space-between;
+    }
+
+    .about__item {
+        max-width: 122px;
     }
 
 
@@ -1887,17 +1970,18 @@ p {
     }
 
     .blog .blog__button {
-        width: 300px;
+        width: 290px;
     }
 
     .main .main__descr:after {
         right: -3%;
+        z-index: -5;
     }
 
     .offer__btn {
         display: block;
         text-align: center;
-        width: 300px;
+        width: 290px;
     }
 
     .offer__title {
@@ -1907,7 +1991,7 @@ p {
 
 
     .offer:after {
-        width: 300px;
+        width: 310px;
         left: 0%;
     }
 
@@ -1924,11 +2008,15 @@ p {
     }
 
     .main__btns {
-        width: 320px;
+        width: 290px;
     }
 
     .main__btn,
     .main__button {
         width: 290px;
+    }
+
+    .direction__item {
+        padding: 19px 42px 25px 15px;
     }
 }
