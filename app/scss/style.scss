@@ -915,30 +915,6 @@ p {
 }
 
 
-.video-section {
-    display: flex;
-}
-
-.video-container {
-    flex: 1;
-}
-
-.menu-container {
-    width: 320px;
-    /* Ширина бокового меню */
-}
-
-.tab {
-    cursor: pointer;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    background-color: #f2f2f2;
-}
-
-.tab:hover {
-    background-color: #ddd;
-}
-
 
 
 
@@ -950,6 +926,138 @@ p {
     line-height: 150%;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.video-lesson {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lessons-list {
+    width: 360px;
+    max-width: 360px;
+}
+
+.video-item {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 0 0;
+    color: #000;
+}
+
+.video-lesson__title {
+    color: #F5F4F4;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.video__item {
+    width: 750px;
+    height: 420px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.video__buttons {
+    text-align: center;
+    margin-bottom: 60px;
+
+    .video-btn {
+        color: #0D46DB;
+    }
+}
+
+.video__buttons {
+    .video-next {
+        color: #F5F4F4;
+    }
+}
+
+.video-btn {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.video-prev {
+    color: #0D46DB;
+    margin-right: 30px;
+    text-decoration: underline;
+}
+
+.video-next {
+    margin-left: 30px;
+    text-decoration: underline;
+}
+
+.lesson-title {
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #F5F4F4;
+
+}
+
+.lesson-descr {
+    color: #F5F4F4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 750px;
+    margin-bottom: 46px;
+    line-height: 24px;
+}
+
+.lesson-quote {
+    padding: 26px 749px 26px 30px;
+    position: relative;
+    z-index: -1;
+    border-radius: 30px;
+    background: #13163F;
+    color: #F5F4F4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.lesson-quote span {
+    display: block;
+}
+
+.lesson-list__title {
+    color: #0D46DB;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 40px;
+}
+
+
+.video-item.active {
+    background-color: #000;
+}
+
+.video-content {
+    width: 750px;
+    max-width: 750px;
+}
+
+.video-lesson__item {
+    display: none;
+}
+
+.video-lesson__item.active {
+    display: block;
 }
 
 .blog {
@@ -1513,9 +1621,11 @@ p {
         max-width: 480px;
         padding: 0 10px;
     }
+
     .post-inner__title {
         font-size: 20px;
     }
+
     .post-inner {
         flex-direction: column-reverse;
     }
